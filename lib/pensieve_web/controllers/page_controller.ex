@@ -9,6 +9,7 @@ defmodule PensieveWeb.PageController do
 
   def about(conn, _params) do
     render(conn, :about)
+
   end
 
 end
