@@ -1,0 +1,14 @@
+<h1 class="text-3xl mb-6">Memories</h1>
+
+
+<!-- This line: -->
+<li :for={memory <- @memories}><%= memory.title %></li>
+
+<!-- Is equivalent to writing this: -->
+<%!--
+
+<%= for memory <- @memories do %>
+  <li><%= memory.title %></li>
+<% end %>
+
+--%>
