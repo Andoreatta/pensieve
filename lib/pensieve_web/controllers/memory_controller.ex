@@ -50,4 +50,13 @@ defmodule PensieveWeb.MemoryController do
     end
   end
 
+  def delete(conn, %{"id" => id}) do
+    memory = Memories.get_memory!(id)
+    {:ok, _memory} = Memories.delete_memory(memory)
+
+    conn
+    |> put_flash(:info, "Memory deleted successfully.")
+    |> redirect(to: ~p"/memories")
+  end
+
 end

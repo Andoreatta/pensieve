@@ -22,4 +22,8 @@ defmodule Pensieve.Memories do
     |> Repo.update()
   end
 
+  def delete_memory(%Memory{} = memory) do
+    Repo.delete(memory)
+  end
+
 end
